@@ -77,4 +77,12 @@ RUN fpm -v
 RUN yum install -y git
 RUN git --version
 
+###############################################
+## install go
+###############################################
+
+RUN yum install -y epel-release
+RUN yum install -y go
+RUN go version
+
 RUN yum -y clean all
