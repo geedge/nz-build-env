@@ -8,3 +8,9 @@
 - fpm 1.14.0
 - git 1.8.3.1
 - go 1.16.13
+
+# BUILD 
+
+```shell
+docker build -t nz-build-env:1.0 .
+```
