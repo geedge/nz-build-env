@@ -90,6 +90,13 @@ RUN go version
 COPY ./depends/mc /usr/bin/
 RUN chmod +x /usr/bin/mc
 
+###############################################
+## install mysql client
+###############################################
+COPY ./depends/mariadb /usr/bin/mysql
+COPY ./depends/mariadb-dump /usr/bin/mysqldump
+RUN chmod +x /usr/bin/mysql /usr/bin/mysqldump
+
 COPY ./depends/maven-setting.xml /usr/share/maven/conf/settings.xml
 
 RUN yum -y clean all && rm -rf /var/cache/yum/*
