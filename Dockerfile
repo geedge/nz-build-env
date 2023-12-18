@@ -3,16 +3,16 @@ FROM centos:7
 ###############################################
 ## install jdk
 ###############################################
-ARG JAVA_FILE=openjdk-21_linux-x64_bin.tar.gz
+ARG JAVA_FILE=graalvm-community-jdk-21.0.1_linux-x64_bin.tar.gz
 
-COPY ./depends/${JAVA_FILE} /tmp/openjdk-21_linux-x64_bin.tar.gz
+COPY ./depends/${JAVA_FILE} /tmp/graalvm-community-jdk-21.0.1_linux-x64_bin.tar.gz
 
 RUN mkdir -p /usr/local/java
-RUN tar -zxf /tmp/openjdk-21_linux-x64_bin.tar.gz --strip-components 1 -C /usr/local/java
+RUN tar -zxf /tmp/graalvm-community-jdk-21.0.1_linux-x64_bin.tar.gz --strip-components 1 -C /usr/local/java
 ENV JAVA_HOME /usr/local/java
 ENV PATH $PATH:$JAVA_HOME/bin
 
-RUN rm -f /tmp/openjdk-21_linux-x64_bin.tar.gz;
+RUN rm -f /tmp/graalvm-community-jdk-21.0.1_linux-x64_bin.tar.gz;
 RUN java -version
 
 ###############################################
