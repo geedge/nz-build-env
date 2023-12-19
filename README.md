@@ -1,7 +1,7 @@
 # docker 已安装组件
 
 - base centos7
-- jdk 1.8
+- GraalVM CE 21.0.1+12.1
 - maven 3.8
 - node v14.18.2
 - npm 6.14.15
